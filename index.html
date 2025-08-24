@@ -203,7 +203,7 @@
     </style>
   </head>
   <body>
-    <header><h1>short</h1></header>
+    <header><h1>小饅頭のShort URL</h1></header>
     <main x-data="app" x-cloak>
       <p x-show.transition.opacity="alert" :class="alert?.type" x-text="alert?.message"></p>
       <input placeholder="输入要缩短的网址..." x-model="url" x-ref="url" />
@@ -216,9 +216,13 @@
       </details>
       <button :class="{ loading }" :disabled="loading || isValidated()" @click="submit($refs, $nextTick)">生成</button>
     </main>
-    <footer>
-     service
+    <footer class="footer">
+      <section class="container">
+        Copyright © 2024 -2025 小饅頭の部屋 All Rights Reserved ·<br>
+        <a href="https://icp.gov.moe/?keyword=20241189" target="_blank">萌ICP备20241189号</a> ·Powered by <a href="https://x-dr/short/" target="_blank">x-dr/short</a>
+      </section>
     </footer>
+
     <script src="asset/js/alpine.js"></script>
     <script>
       const app = {
